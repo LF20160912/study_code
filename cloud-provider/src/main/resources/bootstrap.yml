@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 192.168.3.201:2181
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      profile: dev
+  application:
+    name: provider
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+logging:
+  level:
+    com.example.cloudprovider.mapper: debug

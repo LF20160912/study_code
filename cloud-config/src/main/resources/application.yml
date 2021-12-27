@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 192.168.3.201:2181
+    config:
+      server:
+        git:
+          uri: https://gitee.com/gerry123/cloud-config
+          username: 271314998@qq.com
+          password: zxvnmqt@.123
+  application:
+    name: config
+  rabbitmq:
+    port: 5672
+    host: 192.168.3.201
+    username: test
+    password: test
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
