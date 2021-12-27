@@ -5,8 +5,7 @@ spring:
       discovery:
         register: false
 
-# 服务名称
+#
 provider:
     ribbon:
-    # 负载策略
       NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
