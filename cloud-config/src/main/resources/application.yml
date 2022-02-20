@@ -1,20 +1,20 @@
 spring:
   cloud:
     zookeeper:
-      connect-string: 192.168.3.201:2181
+      connect-string: 127.0.0.1:2181
     config:
       server:
         git:
-          uri: https://gitee.com/gerry123/cloud-config
-          username: 271314998@qq.com
-          password: zxvnmqt@.123
+          uri: https://gitee.com/mk2021/domo-configuration
+          username: 2576731178@qq.com
+          password: Lee@gitee03
   application:
     name: config
   rabbitmq:
     port: 5672
-    host: 192.168.3.201
-    username: test
-    password: test
+    host: 192.168.3.102
+    username: rabbit
+    password: rabbit
 management:
   endpoints:
     web:

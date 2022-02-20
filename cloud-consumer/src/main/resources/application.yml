@@ -1,11 +1,10 @@
 spring:
   cloud:
     zookeeper:
-      connect-string: 192.168.3.201:2181
+      connect-string: 127.0.0.1:2181
       discovery:
         register: false
 
-#
 provider:
     ribbon:
       NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

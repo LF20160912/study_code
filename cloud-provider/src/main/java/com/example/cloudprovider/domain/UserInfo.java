@@ -8,8 +8,8 @@ import java.util.Date;
 @Setter
 @Getter
 public class UserInfo {
-    private Integer userId;
-    private String userName;
-    private int userAge;
-    private Date userBirth;
+    private Integer id;
+    private String name;
+    private int age;
+    private String address;
 }

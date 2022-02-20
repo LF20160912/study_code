@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.cloudprovider.mapper.UserInfoMapper">
     <select id="getUser" resultType="com.example.cloudprovider.domain.UserInfo">
-        select user_id, user_name, user_age, user_birth from t_user where user_id = #{userId}
+        select id, name, age, address from user where id = #{userId}
     </select>
 </mapper>
