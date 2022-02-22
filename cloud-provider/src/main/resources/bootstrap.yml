@@ -1,29 +1,23 @@
+logging:
+  level:
+    com:
+      example:
+        cloudprovider:
+          mapper: debug
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+server:
+  port: 8082
 spring:
+  application:
+    name: provider
   cloud:
-    zookeeper:
-      connect-string: 127.0.0.1:2181
     config:
       discovery:
         enabled: true
         service-id: config
       uri: http://localhost:8081
-      label: provide-master
-      profile: dev
-  application:
-    name: provider
-#  datasource:
-#    driver-class-name: com.mysql.jdbc.Driver
-#    name: defaultDataSource
-#    username: root
-#    password: root.123
-#    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
-  mapper-locations: classpath:mapper/*Mapper.xml
-
-logging:
-  level:
-    com.example.cloudprovider.mapper: debug
-server:
-  port: 8082
+    zookeeper:
+      connect-string: 127.0.0.1:2181
