@@ -2,6 +2,8 @@ spring:
   cloud:
     zookeeper:
       connect-string: 127.0.0.1:2181
+      discovery:
+        instance-id: c1
     config:
       server:
         git:
@@ -15,6 +17,7 @@ spring:
     host: 192.168.3.102
     username: rabbit
     password: rabbit
+# 打印所有地址
 management:
   endpoints:
     web:
